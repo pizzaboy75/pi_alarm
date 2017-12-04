@@ -188,3 +188,10 @@ def troll_katie():
         turn_light_off()
         sleep(0.13)
     return redirect(('/' + get_current_day_name()).lower())
+
+@app.route('/clear_alarm')
+def clear_alarm():
+    scheduler.clear_all_alarm()
+    return redirect(('/' + get_current_day_name()).lower())
+
+
