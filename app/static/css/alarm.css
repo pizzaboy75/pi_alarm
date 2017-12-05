@@ -1,11 +1,13 @@
 body {
 font-family: 'Raleway', sans-serif !important;
-color: #333 !important;
+color: #888 !important;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 font-family: 'Raleway', sans-serif !important;
 font-weight: 700;
+color: #333 !important;
+
 }
 .container .jumbotron {
     padding-left: 0 !important;
