@@ -171,12 +171,16 @@ def get_navbar_template():
 # -- Light Control Routes
 @app.route('/on')
 def turn_light_on():
-    os.system('/opt/pi_alarm_env/revolt-usb-automation-python/revoltoutlets.py ona')
+    current_dir = os.path.abspath(\
+                os.path.dirname(os.path.realpath(__file__)) )
+    os.system(current_dir+'/revolt.py ona')
     return redirect(('/' + get_current_day_name()).lower())
 
 @app.route('/off')
 def turn_light_off():
-    os.system('/opt/pi_alarm_env/revolt-usb-automation-python/revoltoutlets.py offa')
+    current_dir = os.path.abspath(\
+                os.path.dirname(os.path.realpath(__file__)) )
+    os.system(current_dir+'/revolt.py offa')
     return redirect(('/' + get_current_day_name()).lower())
 
 @app.route('/clear_alarm')
