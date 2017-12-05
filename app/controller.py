@@ -30,7 +30,6 @@ def render(templatename, **kwargs):
 # -- Global Variables
 current_day = datetime.date.today() + datetime.timedelta(days=1)
 
-light_driver = LightDriver()
 scheduler = Scheduler()
 
 # -- Routes
