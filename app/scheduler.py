@@ -80,8 +80,7 @@ class Scheduler(object):
 
         return True
 
-    def clear_all_alarm(self):
-        for day in [0, 1, 2, 3, 4, 5, 6] :
-            self.cron.remove_all(comment="ON for %s" % day)
-            self.cron.remove_all(comment="OFF for %s" % day)
-            self.cron.write()
+    def clear_all_alarm(self,weekday):
+        self.cron.remove_all(comment="ON for %s" % weekday)
+        self.cron.remove_all(comment="OFF for %s" % weekday)
+        self.cron.write()
