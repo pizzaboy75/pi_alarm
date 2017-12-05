@@ -171,12 +171,12 @@ def get_navbar_template():
 # -- Light Control Routes
 @app.route('/on')
 def turn_light_on():
-    light_driver.on()
+    os.system('/opt/pi_alarm_env/revolt-usb-automation-python/revoltoutlets.py ona')
     return redirect(('/' + get_current_day_name()).lower())
 
 @app.route('/off')
 def turn_light_off():
-    light_driver.off()
+    os.system('/opt/pi_alarm_env/revolt-usb-automation-python/revoltoutlets.py offa')
     return redirect(('/' + get_current_day_name()).lower())
 
 @app.route('/clear_alarm')
