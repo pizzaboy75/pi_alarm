@@ -1,3 +1,93 @@
+body {
+font-family: 'Raleway', sans-serif !important;
+color: #333 !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+font-family: 'Raleway', sans-serif !important;
+font-weight: 700;
+}
+.container .jumbotron {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.row {
+    background-color: #f1f1f1 !important;
+    padding-top: 10px !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 23px !important;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.homepage-jumbotron h1 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.navbar {
+    border-radius: 0px !important;
+    border: 0px !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff !important;
+}
+
+.navbar-toggle:hover,.navbar-default .navbar-toggle:focus {background-color:#1EAEDB !important;}
+
+
+.btn-primary {
+
+color:#ffffff !important;
+  background-color: #33C3F0 !important;
+border-color:#33C3F0 !important;}
+
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary {
+
+color:#ffffff;
+background-color:#1EAEDB;
+border-color:#1EAEDB;}
+
+
+input[type="time"] {
+    width: 218px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+}
+
+.btn {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
 .homepage-jumbotron {
   background-color: transparent;
   text-align: center;
@@ -12,12 +102,11 @@
 }
 .navbar-default .navbar-brand {
   text-align: center;
-  color: #e5e5e5;
+  color: #fff;
 }
 .navbar {
-  box-shadow: 0px 0px 15px #000;
-  background-color: #563d7c;
-  border-color: #463265;
+  background-color: #33C3F0;
+  border-color: #33C3F0;
 }
 .nav-justified li {
   float: none;
@@ -26,17 +115,17 @@
   color: #e5e5e5;
 }
 .nav-justified li a:hover {
-  background-color: #463265;
+  background-color: #1EAEDB;
 }
 .nav-justified li a:focus {
-  background-color: #463265;
+  background-color: #1EAEDB;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #e5e5e5;
-  background-color: #463265;
+  color: #fff;
+  background-color: #1EAEDB;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #e5e5e5 !important;
+  color: #fff !important;
 }
