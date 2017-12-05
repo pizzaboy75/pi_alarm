@@ -182,7 +182,7 @@ def turn_light_off():
     return redirect(('/' + get_current_day_name()).lower())
 
 @app.route('/clear_alarm')
-def clear_alarm():
+def clear_alarm(weekday):
     scheduler.clear_all_alarm()
     return redirect(('/' + get_current_day_name()).lower())
 
