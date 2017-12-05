@@ -5,7 +5,6 @@ import random
 
 from app import app
 from flask import flash, redirect, get_flashed_messages, request
-from light_driver import LightDriver
 from mako.lookup import TemplateLookup
 from scheduler import Scheduler
 
