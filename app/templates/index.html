@@ -4,17 +4,17 @@
   spacing for the navbar
 </%doc>
 <div class="jumbotron homepage-jumbotron">
-  <h1>Good Morning, Sunshine Alarm!</h1>
+  <h1>Good Morning,<br/>Sunshine Alarm!</h1>
   <p class="lead">Start your day a little bit brighter.</p>
   <hr/>
   <p>Set alarm for ${day}</p>
   <form action="/set_alarm", method="POST">
-    <input name="time" type="time" value="${time}"/>
+    <input name="time" type="time" value="${time}"/><br/>
     <input type="submit" class="btn btn-primary btn-lg"></input>
     <a href="/clear_alarm" class="btn btn-danger btn-lg">Clear</a>
   </form>
 </div><!-- /jumbotron -->
-<hr/>
+<br/>
 <div class="row" style="text-align:center;">
   <h2>Light Controls</h2>
   <div class="container">
