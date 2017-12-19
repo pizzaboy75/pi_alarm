@@ -170,7 +170,7 @@ def get_navbar_template():
 # -- Light Control Routes
 @app.route('/on')
 def turn_light_on():
-    sonoff('on')
+    sonoff('On')
     return redirect(('/' + get_current_day_name()).lower())
 
 @app.route('/off')
