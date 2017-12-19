@@ -12,7 +12,6 @@ python_libs=(
     'uwsgi'                     # for serving the site
     'Flask-BasicAuth'           # for locking down the site
     'python-crontab==2.1.1'     # for accessing the crontab
-    'pyusb'                     # for the revolt usb stick
 )
 
 # Install each of the libraries
