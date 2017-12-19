@@ -3,6 +3,7 @@ import os
 import pickle
 import random
 
+from sonoff import sonoff
 from app import app
 from flask import flash, redirect, get_flashed_messages, request
 from mako.lookup import TemplateLookup
@@ -169,16 +170,12 @@ def get_navbar_template():
 # -- Light Control Routes
 @app.route('/on')
 def turn_light_on():
-    current_dir = os.path.abspath(\
-                os.path.dirname(os.path.realpath(__file__)) )
-    os.system(current_dir+'/revolt.py ona')
+    sonoff('on')
     return redirect(('/' + get_current_day_name()).lower())
 
 @app.route('/off')
 def turn_light_off():
-    current_dir = os.path.abspath(\
-                os.path.dirname(os.path.realpath(__file__)) )
-    os.system(current_dir+'/revolt.py offa')
+    sonoff('off')
     return redirect(('/' + get_current_day_name()).lower())
 
 @app.route('/clear_alarm')
