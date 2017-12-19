@@ -2,7 +2,7 @@
 from sonoff import sonoff
 
 def main():
-    sonoff('on')
+    sonoff('On')
 
 if __name__ == "__main__":
         main()
