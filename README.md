@@ -33,7 +33,7 @@ cd pi_alarm_env
 ```
 Next, check out the project from git, and install the python libraries:
 ```
-git clone https://github.com/ajpierce/pi_alarm.git
+git clone https://github.com/pizzaboy75/pi_alarm.git
 ./pi_alarm/script/setup.sh
 ```
 
