@@ -2,7 +2,6 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # -- Alarm Settings
-PIN = 10                       # Pin to which the PowerSwitch Tail is connected
 ALARM_DURATION = 30            # Light duration in minutes
 
 # -- General Config
