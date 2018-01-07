@@ -1,6 +1,6 @@
 # Raspberry Pi Alarm Clock
 This project takes a Raspberry Pi and, web-enabling it, turns it into an alarm
-clock. The Pi controls a daylight lamp connected to a revolt RC plug.
+clock. The Pi controls a daylight lamp connected to a [Revolt PX-1672](http://www.revolt-power.de/USB-Dongle-PX-1674-919.shtml) RC plug.
 
 The alarm is configured through a web interface, and has been optimized for
 both desktop and mobile. Instructions for building it below!
