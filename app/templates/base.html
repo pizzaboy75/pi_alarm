@@ -4,30 +4,45 @@
 <% messages = get_flashed_messages(category_filter=["message"]) %>
 <% errors = get_flashed_messages(category_filter=["error"]) %>
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/style.css" rel="stylesheet" type="text/css" />
+    <script src="http://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="static/script.js"></script>
+<!--
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+-->
 
+<link rel="manifest" href="static/manifest.json">
     <title>Sunshine Alarm</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/alarm.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <link rel="shortcut icon" href="static/favicon.ico">
   </head>
   <body>
-    <!-- Bootstrap core JavaScript -->
-    <script src="static/js/jquery-1.10.2.min.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
-
+   
     ## -- Navbar
     <%include file="navbar.html"/>
 
+<header id="header">
+      <div class="mui-appbar mui--appbar-line-height">
+        <div class="mui-container-fluid">
+          <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">&#9776;</a>
+          <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">&#9776;</a>
+          <span class="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Set day</span>
+        </div>
+      </div>
+    </header>
+    <div id="content-wrapper">
+      <div class="mui--appbar-height"></div>
+
+
     ## -- Flashed Messages
-    <div class="container">
       % for message in messages:
         <div class="alert alert-success">
           <p class="lead">${message}</p>
@@ -41,7 +56,8 @@
 
       ## -- Render body content!
       ${self.body()}
-    </div> <!-- /body container -->
+    <!-- /body container -->
+    <%include file="footer.html"/>
 
   </body>
 </html>
