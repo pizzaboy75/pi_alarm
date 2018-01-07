@@ -53,6 +53,7 @@ def set_alarm():
     return redirect(('/' + day).lower())
 
 def render_day(day):
+
     # Set the current day every time we get to this function to ensure that
     # the day persists on form submission.
     set_current_day( get_date_with_day(day) )
@@ -61,15 +62,15 @@ def render_day(day):
     # Get the time the alarm is currently set to to render it
     alarm_time = scheduler.get_time_for_day(weekday)
 
-    # Get the random messages from the config
-    messages = app.config['MESSAGES']
+    # Get the duration from the config
+    durationconf = app.config['ALARM_DURATION']
 
     # Render the page
     return render( 'index.html',
             active_tab=get_current_day().weekday(),
             day=get_current_day_name(),
-            time=alarm_time,
-            message=random.choice(messages))
+            duration=durationconf,
+            time=alarm_time)
 
 @app.route('/monday')
 def monday():

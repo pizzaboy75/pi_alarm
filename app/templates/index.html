@@ -3,24 +3,27 @@
   Note that the base file already contains a "container" div with appropriate
   spacing for the navbar
 </%doc>
-<div class="jumbotron homepage-jumbotron">
-  <h1>Good Morning,<br/>Sunshine Alarm!</h1>
-  <p class="lead">Start your day a little bit brighter.</p>
-  <hr/>
-  <p>Set alarm for ${day}</p>
-  <form action="/set_alarm", method="POST">
-    <input name="time" type="time" value="${time}"/><br/>
-    <input type="submit" class="btn btn-primary btn-lg"></input>
-    <a href="/clear_alarm" class="btn btn-danger btn-lg">Clear</a>
+
+  <div class="mui-container-fluid" style="width: 300px; text-align: center">
+	     
+	      <img alt="Logo" src="static/sun.svg" style="width: 110px; height: 110px; margin-top: 40px;">
+        <h1 style="margin-top: 10px;">Sunshine Alarm</h1>
+        <p>Set the alarm to your desired wake-up time. The light will stay on for ${duration} minutes.</p>
+       
+       <div style="float:left; margin-top: 30px; font-size: 0.9em;">
+       <p>Timer for for ${day}</p>
+       </div>
+  <form class="mui-form" action="/set_alarm", method="POST">
+	    <div class="mui-textfield">
+
+    <input name="time" type="time" value="${time}"/>
+	    </div>
+	        <a href="/clear_alarm" class="mui-btn" style="margin-bottom: 20px; width: 128px; font-size: 0.8em; padding: 0px; border: 1px solid #2196F3; color: #2196F3;">Clear</a>
+
+	      <button type="submit" class="mui-btn mui-btn--primary" style="margin-bottom: 20px; width: 128px; font-size: 0.8em; padding: 0px; border: 1px solid #2196F3; ">Set time</button>
+
   </form>
-</div><!-- /jumbotron -->
-<br/>
-<div class="row" style="text-align:center;">
-  <h2>Light Controls</h2>
-  <div class="container">
-    <div class="col-md-4 col-md-offset-4" style="margin-top:10px;">
-      <a href="/on" class="btn btn-success btn-lg">ON</a>
-      <a href="/off" class="btn btn-danger btn-lg">OFF</a>
+      </div>
     </div>
-  </div>
-</div>
+
+
