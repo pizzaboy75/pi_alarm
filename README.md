@@ -53,13 +53,27 @@ computer (or your mobile phone).
 
 
 ## Configure the server to run on boot
-To ensure the alarm starts on boot, follow the guide [here](http://www.stuffaboutcode.com/2012/06/raspberry-pi-run-program-at-start-up.html),
-but your script will be the simple one outlined below:
+To ensure the alarm starts on boot, create the following file with this content:
+
+/lib/systemd/system/pi-alarm.service
 
 ```
-#!/bin/bash
-screen -S alarm python /opt/pi_alarm_env/pi_alarm/run.py
+[Unit]
+Description=PI Alarm Clock
+After=network.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /opt/pi_alarm_env/pi_alarm/run.py
+
+[Install]
+WantedBy=multi-user.target
 ```
 
-This starts a new screen (with the name "alarm" and invokes python to start
-the alarm clock server.
+Next, enable it:
+
+```
+sudo systemctl enable pi-alarm
+```
+
+
