@@ -10,7 +10,7 @@ both desktop and mobile. Instructions for building it below!
 <img alt="Mobile2" src="https://i.imgur.com/PpwkZcm.png" width=250 />
 <img alt="Mobile3" src="https://i.imgur.com/yriXSCj.png" width=250 />
 
-Much thanks to ajpierce for his original work, which i effortless forked and edited to suit my needs. 
+Much thanks to [ajpierce](https://github.com/ajpierce/) for his original work, which i effortless forked and edited to suit my needs. 
 
 ## Install Prerequisites
 Install `git` and `screen` so we can check out the code and run it in the
