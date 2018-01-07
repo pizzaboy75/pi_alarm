@@ -13,11 +13,10 @@ both desktop and mobile. Instructions for building it below!
 Much thanks to [ajpierce](https://github.com/ajpierce/) for his original work, which i effortless forked and edited to suit my needs. 
 
 ## Install Prerequisites
-Install `git` and `screen` so we can check out the code and run it in the
-background.
+Install `git` aso we can check out the code.
 ```
 sudo apt-get update
-sudo apt-get install git screen
+sudo apt-get install git 
 ```
 
 Next, install virtualenv for python by following the Initial Setup section of
@@ -56,7 +55,6 @@ computer (or your mobile phone).
 To ensure the alarm starts on boot, create the following file with this content:
 
 /lib/systemd/system/pi-alarm.service
-
 ```
 [Unit]
 Description=PI Alarm Clock
@@ -71,7 +69,6 @@ WantedBy=multi-user.target
 ```
 
 Next, enable it:
-
 ```
 sudo systemctl enable pi-alarm
 ```
